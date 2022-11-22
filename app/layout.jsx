@@ -1,4 +1,8 @@
 import './globals.css'
+import Header from './header'
+import Footer from './footer'
+import Sidebar from './components/Sidebar'
+
 
 export default function RootLayout({ children }) {
   return (
@@ -8,7 +12,15 @@ export default function RootLayout({ children }) {
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+
+      <body>
+        <Header />
+        <main>
+        <Sidebar />
+        {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   )
 }
