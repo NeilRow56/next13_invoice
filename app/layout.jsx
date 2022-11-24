@@ -1,7 +1,5 @@
 import './globals.css'
 import Header from './header'
-import Footer from './footer'
-import Sidebar from './components/Sidebar'
 
 
 export default function RootLayout({ children }) {
@@ -13,13 +11,16 @@ export default function RootLayout({ children }) {
       */}
       <head />
 
-      <body>
-        <Header />
-        <main>
-        <Sidebar />
-        {children}
-        </main>
-        <Footer />
+      <body className='min-h-screen bg-slate-50 dark:bg-black dark:text-white'>
+        
+      <main>
+        {/* <Header /> */}
+         {children}
+      </main> 
+        
+       
+        
+        
       </body>
     </html>
   )
